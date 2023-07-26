@@ -91,5 +91,7 @@ set(
 add_library(qhull STATIC ${qhull_r_sources} ${qhullcpp_sources})
 target_include_directories(qhull PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/external/qhull/src)
 
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
+
 add_executable(concaveman ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp)
 target_link_libraries(concaveman qhull)
